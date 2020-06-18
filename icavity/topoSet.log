@@ -1,0 +1,74 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1906                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v1906 OPENFOAM=1906
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : Jun 17 2020
+Time   : 12:41:05
+Host   : LAPTOP-ODVE2UUP
+PID    : 2136
+I/O    : uncollated
+Case   : /home/allen/inter_tutorial/icavity
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created faceSet cylinder
+    Applying source patchToFace
+    Adding all faces of patches 1(cylinder) ...
+    Found matching patch cylinder with 36832 faces.
+    faceSet cylinder now size 36832
+Created faceSet bottom_patch_negative
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((-0.5 -0.5 0.01) (0.5 0.5 41))
+    faceSet bottom_patch_negative now size 381156
+Created faceSet top_patch_negative
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((-0.5 -0.5 -1) (0.5 0.5 39.99))
+    faceSet top_patch_negative now size 381124
+Created faceSet bottomPatch
+    Applying source faceToFace
+    Adding all elements of faceSet 1(cylinder)
+    faceSet bottomPatch now size 36832
+Read set faceSet bottomPatch with size 36832
+    Applying source faceToFace
+    Removing all elements of faceSet 1(bottom_patch_negative)
+    faceSet bottomPatch now size 904
+Created faceSet topPatch
+    Applying source faceToFace
+    Adding all elements of faceSet 1(cylinder)
+    faceSet topPatch now size 36832
+Read set faceSet topPatch with size 36832
+    Applying source faceToFace
+    Removing all elements of faceSet 1(top_patch_negative)
+    faceSet topPatch now size 936
+Created faceSet wall
+    Applying source faceToFace
+    Adding all elements of faceSet 1(cylinder)
+    faceSet wall now size 36832
+Read set faceSet wall with size 36832
+    Applying source faceToFace
+    Removing all elements of faceSet 1(bottomPatch)
+    faceSet wall now size 35928
+Read set faceSet wall with size 35928
+    Applying source faceToFace
+    Removing all elements of faceSet 1(topPatch)
+    faceSet wall now size 34992
+
+End
+

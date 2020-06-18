@@ -1,0 +1,8 @@
+./Allclean
+blockMesh > blockMesh.log
+snappyHexMesh -overwrite > snappyHexMesh.log
+
+topoSet > topoSet.log
+createPatch -overwrite > createPatch.log
+touch with_topo_cylinder.foam
+
